@@ -1,0 +1,29 @@
+[
+  {
+    "id" : 0,
+    "name" : "Alice"
+  },
+  {
+    "id" : 1,
+    "name" : "Bob",
+    "age" : 42
+  },
+  {
+    "id" : 2,
+    "name" : "Carla",
+    "job" : "SWE"
+  },
+  {
+    "id" : 3,
+    "age" : 21
+  },
+  {
+    "id" : 4,
+    "product" : "car"
+  },
+  {
+    "id" : 5,
+    "product" : "car",
+    "color" : "red"
+  }
+]
