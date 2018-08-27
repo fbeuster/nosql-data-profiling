@@ -1,0 +1,77 @@
+[
+  {{#repeat 15000}}
+  {
+    "id" : {{@index}},
+    "meta_information" : {
+      "title" : "{{faker 'hacker.phrase'}}",
+      "description" : "{{faker 'lorem.paragraph'}}",
+      "tags" : [
+        {{#repeat 1 10}}
+        "{{faker 'lorem.word'}}"
+        {{/repeat}}
+      ],
+      "monetized" : {{boolean}}
+    },
+    "views" : {{int 100 1000}},
+    "ratings" : {
+      "likes" : {{int 5 50}},
+      "dislikes" : {{int 5 50}}
+    },
+    "uploader" : "{{faker 'internet.password'}}",
+    "comments" : [
+      {{#repeat 1 10}}
+      {
+        "uid" : "{{faker 'internet.password'}}",
+        "date" : "{{date 2018 2018}}",
+        "content" : "{{faker 'lorem.sentence'}}",
+        "ratings" : {
+          "likes" : {{int 1 5}},
+          "dislikes" : {{int 1 5}}
+        },
+        "answers" : [
+          {{#repeat 1 3}}
+          {
+            "uid" : "{{faker 'internet.password'}}",
+            "date" : "{{date 2018 2018}}",
+            "content" : "{{faker 'lorem.sentence'}}"
+          }
+          {{/repeat}}
+        ],
+        "ratings" : {
+          "likes" : {{int 1 5}},
+          "dislikes" : {{int 1 5}}
+        }
+      }
+      {{/repeat}}
+    ],
+    "responses" : [
+        {{#repeat 1 10}}
+        {{int 1 10000}}
+        {{/repeat}}
+    ],
+    "shares" : {{int 10 50}},
+    "downloads" : {{int 20 30}}
+  }
+  {{/repeat}}
+]
+
+
+[
+  {{#repeat 10000}}
+  {
+    "id" : {{@index}},
+    "user_name" : "{{faker 'internet.userName'}}",
+    "phrase" : "{{faker 'hacker.phrase'}}",
+    "subscriber" : {{int 0 10000}},
+    "contact" : {
+      "phone" : "{{faker 'phone.phoneNumber'}}",
+      "user_mail" : "{{faker 'internet.email'}}"
+    },
+    "friends" : [
+        {{#repeat 1 100}}
+        {{int 1 10000}}
+        {{/repeat}}
+    ]
+  }
+  {{/repeat}}
+]
