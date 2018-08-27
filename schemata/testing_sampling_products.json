@@ -1,0 +1,12 @@
+[
+    {{#repeat 7948}}
+    {
+        "id" : {{@index}},
+        "name" : "{{faker 'commerce.productName'}}",
+        "color" : "{{faker 'commerce.color'}}",
+        "price" : {{faker 'commerce.price'}},
+        "material" : "{{faker 'commerce.productMaterial'}}",
+        "description" : "{{faker 'hacker.phrase'}}"
+    }
+    {{/repeat}}
+]
